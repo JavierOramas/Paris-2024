@@ -1,0 +1,84 @@
+ 
+"groups": {
+
+"A":[
+"FRA",
+"USA"
+"GUI",
+"NZL",
+],
+"B":[
+"ARG",
+"MOR",
+"IRQ",
+"UKR"
+],
+"C":[
+"UZB",
+"ESP",
+"EGY",
+"DOM"
+],
+"D":[
+"MAL",
+"ISR",
+"JAP",
+"PAR"
+],
+},
+"lineups"{
+    "FRA": {
+        "Guillaume Restes":{
+            "aerial": "61",
+            "anticipation": "34",
+            "ballDistribution": "70",
+            "position": "G",
+            "saves": "74",
+            "tactical": "47"
+        },
+        "Lucas Chevalier":{},
+        "Quentin Merlin":{},
+        "Castello Lukeba":{},
+        "William Saliba":{},
+        "Malo Gusto":{},
+        "Leny Yoro":{},
+        "Benoit Badiashile":{},
+        "Eduardo Camavinga":{},
+        "Warren Zaïre-Emery":{},
+        "Antoine Griezmann":{},
+        "Khéphren Thuram": {},
+        "Manu Kone":{},
+        "Kylian Mbappé":{},
+        "Mathys Tel":{},
+        "Michael Olise":{},
+        "Rayan Cherki":{},
+        "Elye Wahi":{}
+    },
+    "USA":{
+    "Patrick Schulte":{},
+    "Gabriel Slonina":{},
+    "George Campbell":{},
+    "Maximilian Dietz":{},
+    "Nathan Harriel":{},
+    "Bryan Reynolds":{},
+    "John Tolkin":{},
+    "Jonathan Tomkinson":{},
+    "Caleb Wiley":{},
+    "Paxten Aaronson": {},
+    "Gianluca Busio":{},
+    "Daniel Edelman":{},
+    "Jack McGlynn":{},
+    "Aidan Morris":{},
+    "Tanner Tessmann":{},
+    "Esmir Bajraktarevic":{},
+    "Cade Cowell": {},
+    "Johan Gomez": {},
+    "Diego Luna": {},
+    "Duncan McGuire":{},
+    "Kevin Paredes": {},
+    "Griffin Yow": {}
+    },
+    "GUI":{
+
+    }
+}
