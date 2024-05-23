@@ -21,7 +21,7 @@ for li in li_items:
         team_name = a_tag['href'].split("/")[-1]
         teams[team_name] = { "url": a_tag['href']}
 
-for country, team in teams.items():
+# for country, team in teams.items():
     
 
 
