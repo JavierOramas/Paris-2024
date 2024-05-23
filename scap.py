@@ -22,7 +22,6 @@ for li in li_items:
         teams[team_name] = { "url": a_tag['href']}
 # Get all href
 team_link = [team['url'] for team in teams.values()]
-
 for link in team_link:
     response = requests.get(link)
     soup = BeautifulSoup(response.content , 'html.parser')
@@ -30,4 +29,13 @@ for link in team_link:
     for option in menu_links:
         if "Squad" in option:
             squad_link = option['href']
-    print(squad_link)
+    response = requests.get(squad_link)
+    soup = BeautifulSoup(response.content , 'html.parser')
+    player_names = [td.get_text() for td in soup.find_all('td', class_='name')]
+    with open('lineups.tex' , 'a') as f:
+        f.write(f'{link} \n')
+        f.write("-------------------------------------------------------------")
+        for player in player_names:
+            f.write(player)
+
+
