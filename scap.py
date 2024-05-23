@@ -20,8 +20,14 @@ for li in li_items:
     if a_tag and 'href' in a_tag.attrs:
         team_name = a_tag['href'].split("/")[-1]
         teams[team_name] = { "url": a_tag['href']}
+# Get all href
+team_link = [team['url'] for team in teams.values()]
 
-# for country, team in teams.items():
-    
-
-
+for link in team_link:
+    response = requests.get(link)
+    soup = BeautifulSoup(response.content , 'html.parser')
+    menu_links = soup.find_all('a', class_="menu-item")
+    for option in menu_links:
+        if "Squad" in option:
+            squad_link = option['href']
+    print(squad_link)
