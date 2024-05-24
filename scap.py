@@ -38,4 +38,4 @@ for link in team_link:
         for player in player_names:
             f.write(player)
 
-
+# Hace falta scrapear por las competiciones y quedarse con el squad mas reciente guardado
