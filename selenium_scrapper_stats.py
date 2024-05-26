@@ -13,7 +13,7 @@ with open ("lineups.tex" , 'r') as f:
  
 driver = webdriver.Firefox()
 driver.get('https://www.sofascore.com/')
-with open("player_stats.tex" , 'w') as f:
+with open("playerstats.tex" , 'w') as f:
     for player in players_names: 
         time.sleep(2)
         search_box = driver.find_element(By.XPATH , '//*[@id="__next"]/header/div[1]/div/div/div[2]/div/form/input')
@@ -21,13 +21,16 @@ with open("player_stats.tex" , 'w') as f:
         search_box.send_keys(player)
 
 
-        
-        time.sleep(5)
-        player_link = driver.find_element(By.XPATH , '//*[@id="__next"]/header/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/div[1]/a').get_attribute('href')
-        print(player_link)
+        try:
+            time.sleep(5)
+            player_link = driver.find_element(By.XPATH , '//*[@id="__next"]/header/div[1]/div/div/div[2]/div/div/div[2]/div[1]/div/div[1]/a').get_attribute('href')
+            print(player_link)
 
-        
-        driver.get(player_link)
+            
+            driver.get(player_link)
+        except:
+            print(f"Player {player} not found")
+            f.write(f"Player {player} not found")
 
         time.sleep(3)
         try:
